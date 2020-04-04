@@ -1,0 +1,111 @@
+/*Resets*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+
+body
+{
+  display: grid;
+  grid-template-columns: 1fr; 
+}
+              /*Home*/
+#home
+{
+  background: #d0d2d3;
+  display: inline-grid;
+  grid-template-columns: 1fr; 
+}
+
+header
+{
+  background: #d0d2d3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+}
+
+#logo
+{
+  justify-self:start;
+}
+
+header ul
+{
+  justify-self: end;
+  grid-column: 4/5;
+  padding: 10px 30px;
+}
+
+#home #homeContent
+{
+  background: #e2e2e2;
+  height: 800px;
+}
+
+              /*About*/
+#about
+{
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+#about div
+{
+  grid-auto-rows: minmax(100px, auto);
+}
+
+#aboutTitl
+{
+  grid-column: 1/4 
+}
+
+#aboutCard
+{
+  grid-column: 1/2 
+}
+
+#aboutDesc
+{
+    grid-column: 2/4
+}
+
+
+
+
+
+
+              /*Home*/
+              /*Home*/
+              /*Home*/ 
+                         
+              /*GridStyles*/
+
+
+.grid
+{
+  display: grid;
+  grid-template-columns: repeat (3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  justify-items:stretch;
+  align-items: stretch;
+}
+
+.gridItems
+{
+  grid-column: 1/3;
+  grid-row: 1/3;
+}
+.selfAlign
+{
+  justify-self:start;
+  justify-self:end;
+  align-self: start;
+  align-self: end;
+
+}
+
+
