@@ -8,6 +8,33 @@
 </head>
 <body>
 
+<section id="modal">
+
+	<form id="modalForm">
+		<h3>Want to Hire me?</h3>
+		<img src="img/imgClose.png" class="buttonClose">
+		<input id="modalCompany" type="Text" placeholder="Name and Last Name">
+		<input id="modalContact" type="Text" placeholder="Contact">
+		<input id="modalEmail" type="Text" placeholder="Email">
+		<input id="modalNumber" type="Text" placeholder="Number">
+		<h3>Type of Project:</h3>
+		<input type="radio" id="modalGraph" name="Graphic" class="radioLeft"> 
+			<label for="modalGraph" class="labelLeft">Graphic Design</label>
+		<input type="radio" id="modalIllus" name="Illustration" class="radioRight"> 
+			<label for="modalIllus" class="labelRight">Illustration</label>
+
+		<input type="radio" id="modalWeb" name="Web" class="radioLeft"> 
+			<label for="modalWeb" class="labelLeft">Website</label>
+
+
+		<input type="radio" id="modalSocial" name="Social" class="radioRight"> 
+			<label for="modalSocial" class="labelRight">Social Media</label>
+		<textarea name="Details" rows="6" cols="30" placeholder="Details"></textarea>
+		<input id="modalSubmit" type="Button" value="Submit">
+		<input id="modalClear" type="Button" value="Clear">
+	</form>
+</section>
+
 <section id="home">
 	<header>
 		<div id="logo"> <img src="img/imgLogo.png"></div>
@@ -21,56 +48,60 @@
 	<article></article>	
 	<article id="homeContent"></article>
 </section>
-
+						<h2 id="aboutTitl">About Me</h2>
 <section id="about">
-	<title id="aboutTitl">About Me</title>
-	<div id="aboutCard">
-		<div id="aboutPic"></div>
-		<div id="aboutMe"></div>	
-	</div>
-	<div id="aboutDesc">
-		<div></div>
-
-		<p>Greetings! 
-
-		My name is Engel, I’m a graphic Designer, Web Designer, Motion artist and 
-		a total Nerd. Please check on my work as it grows. 
-
-		I worked as a Web designer at Yellow Pages and Telecom Worldwide 
-		Sollitions Inc. In wich I used mainly HTML, CSS and a little of JavaScript.
-
-		Please Check my code on:
-		https://github.com/</p>
+	
+	<div id="aboutWrap">
+		<div id="aboutCard">
+			<div id="aboutPic"></div>
+			<div id="aboutMe">
+					<ul>
+					<li><strong>Me:</strong></li>
+					<li>Engel Mallen (ClimbSky)</li>
+					<li>Graphic Artist</li>
+					<li>Freelancer</li>
+				</ul>
+			</div>	
+		</div>
+		<div id="aboutDesc">
+			Greetings! 
+			<br><br>
+			My name is Engel, I’m a graphic Designer, Web Designer, Motion artist and 
+			a total Nerd. Please check on my work as it grows. 
+			<br><br>
+			I worked as a Web designer at Yellow Pages and Telecom Worldwide 
+			Sollitions Inc. In wich I used mainly HTML, CSS and a little of JavaScript.
+			<br><br>
+			Please Check my code on:<br>
+			<a href="https://github.com/engelmallen/">github.com/Engelmallen</a>
+		</div>
 	</div>
 </section>
+						<h2>Work</h2>
+<section id="work">
 
+	<article id="workGallery">
+			
+			<div id="GalleryImgs"></div>
+			<div id="GalleryLft"><img src="img/imgArrowLeft.png"></div>
+			<div id="GalleryRgt"><img src="img/imgArrowRight.png"></div>
+
+	</article>
+</section>
+
+						<h2>Contact</h2>
 <section id="contact">
 	<form id="contactForm">
 		<input id="contactName" type="Text" placeholder="Name and Last Name">
-		<input id="contactCompany" type="Text" placeholder="Name and Last Name">
-		<input id="contactEmail" type="Text" placeholder="Name and Last Name">
-		<input id="contactPhone" type="Text" placeholder="Name and Last Name">
+		<input id="contactCompany" type="Text" placeholder="Company Name">
+		<input id="contactEmail" type="Text" placeholder="Email">
+		<input id="contactPhone" type="Text" placeholder="Phone Number">
 		<input id="contactSubmit" type="Button" value="Submit">
 		<input id="contactClear" type="Button" value="Clear">
 	</form>
 </section>
 
-<section id="modal">
-	<form id="modalForm">
-		<input id="modalCompany" type="Text" placeholder="Name and Last Name">
-		<input id="modalContact" type="Text" placeholder="Name and Last Name">
-		<input id="modalEmail" type="Text" placeholder="Name and Last Name">
-		<input id="modalNumber" type="Text" placeholder="Name and Last Name">
-		<Label >Type of Project:</Label>
-		<input type="radio" id="modalGraph" name="Graphic"> <label for="modalGraph">Graphic Design</label>
-		<input type="radio" id="modalWeb" name="Web"> <label for="modalWeb">Website</label>
-		<input type="radio" id="modalIllus" name="Illustration"> <label for="modalIllus">Illustration</label>
-		<input type="radio" id="modalSocial" name="Social"> <label for="modalSocial">Social Media</label>
-		<textarea name="Details" rows="12" cols="30" placeholder="Details"></textarea>
-		<input id="modalSubmit" type="Button" value="Submit">
-		<input id="modalClear" type="Button" value="Clear">
-	</form>
-</section>
+
 
 
 
