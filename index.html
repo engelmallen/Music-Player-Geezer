@@ -12,7 +12,7 @@
 
 	<form id="modalForm">
 		<h3>Want to Hire me?</h3>
-		<img src="img/imgClose.png" class="buttonClose">
+		<a class="buttonClose" href="javascript:;"><img id="buttonClose" src="img/imgClose.png" class="buttonClose"></a>
 		<input id="modalCompany" type="Text" placeholder="Name and Last Name">
 		<input id="modalContact" type="Text" placeholder="Contact">
 		<input id="modalEmail" type="Text" placeholder="Email">
@@ -22,11 +22,8 @@
 			<label for="modalGraph" class="labelLeft">Graphic Design</label>
 		<input type="radio" id="modalIllus" name="Illustration" class="radioRight"> 
 			<label for="modalIllus" class="labelRight">Illustration</label>
-
 		<input type="radio" id="modalWeb" name="Web" class="radioLeft"> 
 			<label for="modalWeb" class="labelLeft">Website</label>
-
-
 		<input type="radio" id="modalSocial" name="Social" class="radioRight"> 
 			<label for="modalSocial" class="labelRight">Social Media</label>
 		<textarea name="Details" rows="6" cols="30" placeholder="Details"></textarea>
@@ -37,12 +34,12 @@
 
 <section id="home">
 	<header>
-		<div id="logo"> <img src="img/imgLogo.png"></div>
+		<div id="logo"><a href="#home"> <img src="img/imgLogo.png" height="100%"></a></div>
 		<ul>
-			<li>About Me</li>
-			<li>Hire Me</li>
-			<li>Contact</li>
-			<li>Work</li>
+			<li><a href="#about">About Me</a></li>
+			<li><a id="butHire" href="#">Hire Me</a></li>
+			<li><a href="#contact">Contact</a></li>
+			<li><a href="#work">Work</a></li>
 		</ul>
 	</header>
 	<article></article>	
@@ -82,9 +79,9 @@
 
 	<article id="workGallery">
 			
-			<div id="GalleryImgs"></div>
-			<div id="GalleryLft"><img src="img/imgArrowLeft.png"></div>
-			<div id="GalleryRgt"><img src="img/imgArrowRight.png"></div>
+			<div id="galleryImgs"></div>
+			<div id="galleryLft"><img src="img/imgArrowLeft.png"></div>
+			<div id="galleryRgt"><img src="img/imgArrowRight.png"></div>
 
 	</article>
 </section>
@@ -105,6 +102,6 @@
 
 
 
-	
+<script type="text/javascript" src="portfolios.js"></script>	
 </body>
 </html>
