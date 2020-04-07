@@ -9,12 +9,12 @@ let timerSwitch = true;
 function modaling() {
 	if (change === false)
 		{
-		modal.style.transition = "3s";	
+		modal.style.transition = "1s";	
 		modal.style.marginTop = "5%";	
 		change = true
 		}
 		else	{	
-				modal.style.marginTop = "-50%";
+				modal.style.marginTop = "-100%";
 				change = false
 				clearAll(modalForm)}
 	timerSwitch = false;}
@@ -35,8 +35,13 @@ buttonClose.addEventListener("click", function(){
 	console.log('butClose clicked')
 })
 
+modalClear.addEventListener("click", function(){
+	clearAll(modalForm)
+	console.log('Clear Button clicked')
+})
 
-window.onload = function() 
+window.onload = function()
+ 
 {
 	if (timerSwitch = true)
 	{
@@ -58,7 +63,7 @@ function status() {
 }
 
 function galMove() {
-	if (imgIndex > 8) {imgIndex = 0}
+	if (imgIndex > 8) {imgIndex = 1}
 	if (imgIndex < 1) {imgIndex = 8}
 	galleryImgs.style.background = "url(img/gallery/imgGal"+imgIndex+".jpg) no-repeat center";
 	galleryImgs.style.backgroundSize =  "contain";

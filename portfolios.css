@@ -55,7 +55,10 @@ header
 {
   background: #d0d2d3;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(4, 1fr);
+/*  position: fixed;
+  width: -webkit-fill-available; 
+  width: -moz-available;*/
 }
 
 header a
@@ -101,22 +104,28 @@ h2
   text-align: center;
   font-weight: bold;
   font-size: 48px;
-  padding: 50px 0;
-  color: #dc8637;
+  /*padding: 50px 0;*/
+  color: #dc8636;
+  grid-column: 1;
 
 /*  grid-column: 1/7;*/
+}
+
+.h2Close
+{
+  padding-bottom: 25px;
 }
 
 #aboutWrap
 {
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 2fr;
   grid-auto-rows: minmax(100px, auto);
-  grid-gap: 10px;
+  grid-gap: 45px;
   /*margin: 30px;*/
-  padding: 100px 30px;
-  font-size: 36px;
+  padding: 100px 10%;
+  font-size: larger;
 }
 
 /*#about div
@@ -131,7 +140,7 @@ h2
 
 #aboutCard
 {
-  grid-column: 1/2 
+  /*grid-column: 1/2 */
 }
 
 #aboutPic
@@ -153,7 +162,7 @@ h2
 
 #aboutDesc
 {
-    grid-column: 2/4;
+    /*grid-column: 2/4;*/
 }
 
             
@@ -182,7 +191,7 @@ h2
 
 #workGallery img
 {
-    margin: 185% auto;
+    margin: 140% auto;
     display: block;
 }
 
@@ -191,7 +200,7 @@ h2
 {
   grid-column: 1/2;
   grid-row: 1;
-  min-height: 800px;
+  /*min-height: 800px;*/
 }
 
 #galleryImgs
@@ -199,7 +208,7 @@ h2
   background-size: contain;
   grid-column: 1/9;
   grid-row: 1;
-  min-height: 800px;
+  /*min-height: 800px;*/
   transition: 2s;
 }
 
@@ -207,7 +216,7 @@ h2
 {
   grid-column: 3;
   grid-row: 1;
-  min-height: 800px;
+  /*min-height: 800px;*/
 } 
 
 
@@ -216,7 +225,7 @@ h2
 {
   /*display: inline-block;*/
   background: #808184;
-  padding: 30px 35% 17%;
+  padding: 30px 35% 10%;
   margin-bottom: 0;
 }
 
@@ -270,16 +279,10 @@ h2
   margin-top: 5%;
   padding: 30px 35%;
   position: fixed;
-  margin-top: -50%;
-  
+  margin-top: -100%;
+  z-index: 1000;
 }
 
-#modal:hover
-{
-  /*display: inline-block;*/
-/*  background: #dc8636;*/
-  padding: 30px 35%;
-}
 
 #modalForm
 {
@@ -329,11 +332,13 @@ h2
 .radioLeft
 {
   grid-column: 1/2 !important;
+  margin: 74% auto;
 }
 
 .radioRight
 {
   grid-column: 3/4 !important;
+  margin: 74% auto;
 }
 
 .labelLeft
