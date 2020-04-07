@@ -50,6 +50,43 @@ window.onload = function()
 	}
 }
 
+			//arts
+
+
+let artGallery = document.getElementById("artGallery")
+let artGalLeft = document.getElementById("artGalLeft")
+let artGalRight = document.getElementById("artGalRight")
+
+let artIndex = 1;
+
+function artStatus() {
+ 	console.log(artIndex)
+}
+
+function artMove() {
+	if (artIndex > 7) {artIndex = 1}
+	if (artIndex < 1) {artIndex = 7}
+	artGallery.style.background = "url(img/art/imgArt"+artIndex+".jpg) no-repeat center";
+	artGallery.style.backgroundSize =  "contain";
+	artStatus()
+}artMove()
+
+function artTimmer(){
+setInterval(function() {
+	artIndex += 1;
+	artMove()	
+},5000)}artTimmer()
+
+artGalRight.addEventListener('click', function () {
+	artIndex += 1;
+	artMove()
+})
+
+artGalLeft.addEventListener('click', function () {
+	artIndex -= 1;
+	artMove()
+})
+
 			//Gallery
 
 let galleryImgs = document.getElementById("galleryImgs")
@@ -69,6 +106,12 @@ function galMove() {
 	galleryImgs.style.backgroundSize =  "contain";
 	status()
 }galMove()
+
+function galleryTimmer(){
+setInterval(function() {
+	imgIndex += 1;
+	galMove()	
+},7000)}galleryTimmer()
 
 galleryRgt.addEventListener('click', function () {
 	imgIndex += 1;

@@ -36,41 +36,61 @@
 	<header>
 		<div id="logo"><a href="#home"> <img src="img/imgLogo.png" height="100%"></a></div>
 		<ul>
+
+			<li><a id="butHire" href="#">Contact Me</a></li>
+			<li><a href="#contact">Art</a></li>			
+			<li><a href="#workIndex">Design</a></li>
 			<li><a href="#about">About Me</a></li>
-			<li><a id="butHire" href="#">Hire Me</a></li>
-			<li><a href="#contact">Contact</a></li>
-			<li><a href="#work">Work</a></li>
+
 		</ul>
 	</header>
-	<article></article>	
-	<article id="homeContent"></article>
+
+	<article id="homeContent">
+		<div id="artGalRight"><img src="img/imgArrowLeft.png"></div>		
+		<div id="artGallery"></div>
+		<div id="artGalLeft"><img src="img/imgArrowRight.png"></div>
+
+
+	</article>
 </section>
+
+						<h2 id="workIndex">Work</h2>
+<section id="work">
+
+	<article id="workGallery">
+			
+			<div id="galleryImgs"></div>
+			<div id="galleryLft"><img src="img/imgArrowLeft.png"></div>
+			<div id="galleryRgt"><img src="img/imgArrowRight.png"></div>
+
+	</article>
+</section>
+
 						<h2 id="aboutTitl">About Me</h2>
 <section id="about">
 	
 	<div id="aboutWrap">
 		<div id="aboutCard">
-			<div id="aboutPic"></div>
-			<div id="aboutMe">
-					<ul>
-					<li><strong>Me:</strong></li>
-					<li>Engel Mallen (ClimbSky)</li>
-					<li>Graphic Artist</li>
-					<li>Freelancer</li>
+			<div id="aboutMe"  class="aboutLimts">
+				<img src="img/imgMe.jpg">
 				</ul>
 			</div>	
 		</div>
-		<div id="aboutDesc">
+		<div id="aboutDesc" class="aboutLimts">
 			
 			Hey! I am Engel Mallen.
 			<br><br>
-			I'm simple passionate about the arts and enjoy turning my ideas into actual projects.
-			I am experienced in Graphic Design, Web Design and Motion Arts.
+			I'm simply passionate about the arts and enjoy turning my ideas into actual projects.
+			I am experienced in Graphic Design, Web Design and Motion Arts and Illustration.
 			<br><br>
-			Ckeck out my work (insert link)
+			Ckeck out my work: <a href="https://engelmallen.weebly.com/" style="color:#db8535;">
+			Engel's Portfolio
+			</a>
 			<br><br>
 			Want a sneak pick of my code?
-			<a href="https://github.com/engelmallen/">https://github.com/</a>
+			<br><br>
+			Take a look at it on:
+			<a href="https://github.com/engelmallen/" style="color:#db8535;">https://github.com/</a>
 
 <!-- 			Greetings! 
 			<br><br>
@@ -85,32 +105,26 @@
 		</div>
 	</div>
 </section>
-						<h2>Work</h2>
-<section id="work">
+						<!-- <h2 class="h2Close">Contact</h2> -->
+<footer>
 
-	<article id="workGallery">
-			
-			<div id="galleryImgs"></div>
-			<div id="galleryLft"><img src="img/imgArrowLeft.png"></div>
-			<div id="galleryRgt"><img src="img/imgArrowRight.png"></div>
 
-	</article>
-</section>
-
-						<h2 class="h2Close">Contact</h2>
-<section id="contact">
-	<form id="contactForm">
+<!-- 	<form id="contactForm">
 		<input id="contactName" type="Text" placeholder="Name and Last Name">
 		<input id="contactCompany" type="Text" placeholder="Company Name">
 		<input id="contactEmail" type="Text" placeholder="Email">
 		<input id="contactPhone" type="Text" placeholder="Phone Number">
 		<input id="contactSubmit" type="Button" value="Submit">
 		<input id="contactClear" type="Button" value="Clear">
-	</form>
-</section>
+	</form> -->
 
 
-
+<div id="socialMedia" >
+	<img src="img/imgGitHub.png">
+	<img src="img/imgInstagram.png">
+	<img src="img/imgWeebly.png">
+</div>
+</footer>
 
 
 <script type="text/javascript" src="portfolios.js"></script>	
