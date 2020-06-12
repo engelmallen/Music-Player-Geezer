@@ -17,12 +17,22 @@ function modaling() {
 				modal.style.marginTop = "-100%";
 				change = false
 				clearAll(modalForm)}
-	timerSwitch = false;}
+		timerSwitch = false;
+	}
+
 
 function modalTimer() {
 		setTimeout(function () {
-			modaling()
+	if (change === false)
+		{
+		modal.style.transition = "1s";	
+		modal.style.marginTop = "5%";	
+		change = true
+		}
+
+			//modaling()
 		},3000)}
+
 
 function clearAll(currentForm){currentForm.reset()}
 
@@ -32,16 +42,14 @@ butHire.addEventListener("click", function(){
 
 buttonClose.addEventListener("click", function(){
 	modaling();
-	console.log('butClose clicked')
-})
+	console.log('butClose clicked')})
 
 modalClear.addEventListener("click", function(){
 	clearAll(modalForm)
-	console.log('Clear Button clicked')
-})
+	console.log('Clear Button clicked')})
+
 
 window.onload = function()
- 
 {
 	if (timerSwitch = true)
 	{
