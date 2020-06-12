@@ -13,13 +13,14 @@ function status(whom) {
 		console.log(whom)
 }
 
+curAudio = null;
+
 function player(current) {
-	var audio = new Audio(current);
+	curAudio = new Audio(current);
 }
 
 playCurrent.addEventListener('click', function(){
-
-	audio.play()
+	curAudio.play()
 
 })
 
