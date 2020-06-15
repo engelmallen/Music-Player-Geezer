@@ -1,55 +1,158 @@
-var audioButton = document.getElementById("audioButton")
-var selectedSong = document.getElementById("selectedSong")
+var audioButton = document.getElementById("audioButton")/**/
+var selectedSong = document.getElementById("selectedSong")/**/
 var tracks = document.getElementById("tracks")/*For the visible tracklist*/
-var btnAddSong = document.getElementById("btnAddSong")
-var btnGetSong = document.getElementById("btnGetSong")
+var btnAddSong = document.getElementById("btnAddSong")/**/
+var btnGetSong = document.getElementById("btnGetSong")/**/
+var whole = document.getElementById("whole")/**/
 
-var playCurrent = document.getElementById("playCurrent")
 
 
-// var player = document.getElementById("player")
-
-function status(whom) {
-		console.log(whom)
+/*My function "status" helsps me check the current status/value of my variables*/
+function status() {
+	console.log("==>Values Status:<==")
+	console.log("playlist length: " + playlist.length)
+	console.log("playlist current song: " + playlist[changer])
+	console.log("Changer Var cur Value " + changer)
+	console.log(" " + audio)
+	console.log("continuous or Random: " + audEndings)
 }
 
-function player(current) {
-	var audio = new Audio(current);
-}
 
-playCurrent.addEventListener('click', function(){
-
-	audio.play()
-
-})
-
-// function playMe(path) {
-// 	var audio = new Audio(path);
-// 	audio.pause();
-// 	audio.play();
-// }
-
+/*General Variables*/
 
 var playlist = []
 
-let changer = []
+let changer = 0
+
+var audio = new Audio();
+
+var audEndings = "continuous";
+
+
+/*Functionalities of the App*/
+
+function curPlayer() {
+	audio.pause()
+	audio = new Audio(playlist[changer]);
+	if (audEndings === "continuous") {
+		audio.onended = function() {
+			nextOne()	
+			}
+		} else {
+			if (audEndings === "random") {
+			audio.onended = function() {
+				randomOne()	
+				}
+			}
+		}
+	}
+
+
+function nextOne(){
+	
+	if (changer < playlist.length-1) {
+		changer += 1;
+		curPlayer()
+		
+		audio.play()
+		status()
+	} else {changer = 0
+
+	curPlayer()
+	audio.play()
+	status()
+	}
+}
+
+function lastOne(){
+	if (changer === 0) {
+		changer = playlist.length-1
+		curPlayer()
+		audio.play()
+		status("current song:" + playlist[changer])
+		status("current song var:" + changer)
+	}
+	else{
+		changer -= 1;
+		curPlayer()
+		audio.play()
+		status("current song:" + playlist[changer])
+		status("current song var:" + changer)
+	}	
+}
+
+function randomOne() {
+	changer = Math.floor(Math.random() * playlist.length)
+	curPlayer()
+	audio.play()
+	status(playlist.length)
+	status(playlist[changer])
+	status(changer)
+}
+
+			/*Player Buttons*/
+playCurrent.addEventListener('click', function(){
+	audio.play()
+	status()
+})
+
+pauseCurrent.addEventListener('click', function(){
+	audio.pause()
+	status()
+})
+
+playNext.addEventListener('click', function(){
+	
+	if (audEndings === "continuous") {
+		nextOne()
+		}				
+		 else {	
+		 	randomOne()
+		 }
+	})
+
+playLast.addEventListener('click', function(){
+	
+	if (audEndings === "continuous") {
+		lastOne()
+		}				
+		 else {	
+		 	randomOne()
+		 }
+	}
+	)
+
+playRandom.addEventListener('click', function(){
+	audEndings = "random";
+	status()
+	}
+	)
+
+
+
 
 
 
 btnAddSong.addEventListener('click', function () {
-	let a = btnGetSong.value.split("fakepath")
+	var a = btnGetSong.value.split("fakepath")
 	a = "audio"+ a.slice(1)
 	playlist.push(a)
-	// playlist.push(btnGetSong.value)
-	console.log(playlist)
-
+	console.log("Playlist: "+playlist)
+	console.log("added: "+a)
+if (a !="audio") {
 		let newSong = document.createElement("LI")
 		let newLink = document.createElement("A")
 		newLink.innerHTML = a
 		newLink.href = "javascript:;"
 		newLink.name = a
-		newLink.onclick = player(newLink.name)
 		newLink.classList.add("page-link")
 		newSong.appendChild(newLink)
 		tracks.appendChild(newSong)
+	}	
+	else {a = null}
+		curPlayer()
 })
+
+
+
+

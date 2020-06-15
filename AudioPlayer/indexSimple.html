@@ -13,25 +13,24 @@
 		<div class="playerSpace">
 
 		</div>
-		<div class="container-fluid bg-secondary rounded">
-			<div class="container-fluid bg-white"></div>
-			<img src="img/icons/skip-backward.svg">
-			<img id="playCurrent" src="img/icons/play.svg">
-			<img src="img/icons/forward.svg">
-			<input id="btnGetSong" type="file" placeholder="Select New Track">
-
-<!-- 			<input id="selectedSong" value="">-->
-			<button id="btnAddSong">Add</button> 
+		<div id="whole" class="container-fluid bg-secondary rounded">
+			<div class="row h-25">
+				<img id="playLast" src="img/icons/skip-backward-fill.svg" class="mr-1 col-2">
+				<img id="playCurrent" src="img/icons/play-fill.svg" class="mr-1 col-2">
+				<img id="pauseCurrent" src="img/icons/pause-fill.svg" class="mr-1 col-2">
+				<img id="playNext" src="img/icons/skip-forward-fill.svg" class="mr-1 col-2">
+				<img id="playRandom" src="img/icons/arrow-left-right.svg"class="mr-5 col-2">
+			<div class="form-inline col-12">
+				<input id="btnGetSong" class="form-control-file" type="file" placeholder="Select New Track">
+				<button id="btnAddSong" class="btn btn-light">Add</button> 
+			</div>
+			</div>
 			
 		</div>
-		<div class="h5 pt-5" >My Playlist:</div>
+		
 		<ol id="tracks" class="list-group">
- 			<li class="list-group-item"> </li>
-<!--			<li class="list-group-item"></li>
-			<li class="list-group-item"></li>
-			<li class="list-group-item"></li>
-			<li class="list-group-item"></li>
-			<li class="list-group-item"></li> -->
+ 			<div class="h5 pt-5" >My Playlist:</div>
+
 
 		</ol>
 
