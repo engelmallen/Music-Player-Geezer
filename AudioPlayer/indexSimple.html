@@ -8,28 +8,40 @@
 </head>
 <body class="bg-dark">
 
-<div class="container bg-info my-5 py-5 rounded">
+<div  class="container bg-info my-5 p-4 rounded">
 	<div class="container-fluid">
-		<div class="playerSpace">
+		<div class="playerSpace bg-dark buttons p-2 d-block rounded">
 
-		</div>
-		<div id="whole" class="container-fluid bg-secondary rounded">
+		
+		<div id="whole" class="container-fluid bg-secondary text-center">
 			<div class="row h-25">
-				<img id="playLast" src="img/icons/skip-backward-fill.svg" class="mr-1 col-2">
-				<img id="playCurrent" src="img/icons/play-fill.svg" class="mr-1 col-2">
-				<img id="pauseCurrent" src="img/icons/pause-fill.svg" class="mr-1 col-2">
-				<img id="playNext" src="img/icons/skip-forward-fill.svg" class="mr-1 col-2">
-				<img id="playRandom" src="img/icons/arrow-left-right.svg"class="mr-5 col-2">
-			<div class="form-inline col-12">
-				<input id="btnGetSong" class="form-control-file" type="file" placeholder="Select New Track">
-				<button id="btnAddSong" class="btn btn-light">Add</button> 
+				<div id="currentSong" class="col-8 "></div>
+				<div id="currentOrder"  class="col-4"></div>
+				<div id="CD" class="shadow col-12 pb-3 bg-dark"></div>
+				<div id="buttons" class="col-12 container-fluid py-3 d-block">
+					
+					<div id="playLast" class="p-3 mx-3  butHeigh d-inline "></div>
+					<div id="playCurrent" class="p-3 mx-3 butHeigh d-inline "></div>
+					<div id="pauseCurrent" class="p-3 mx-3 butHeigh  d-inline "></div>
+					<div id="playNext" class="p-3 butHeigh mx-3  d-inline "></div>
+					<div id="playRandom" class="p-3 mx-3 butHeigh d-inline "></div>
+				</div>
+
+<!-- 				<img id="playLast" src="img/icons/skip-backward-fill.svg" class="mr-1 col-2">
+<img id="playCurrent" src="img/icons/play-fill.svg" class="mr-1 col-2">
+<img id="pauseCurrent" src="img/icons/pause-fill.svg" class="mr-1 col-2">
+<img id="playNext" src="img/icons/skip-forward-fill.svg" class="mr-1 col-2">
+<img id="playRandom" src="img/icons/arrow-left-right.svg"class="mr-5 col-2"> -->
+			<div class="form-inline col-12 py-2">
+				<input id="btnGetSong" class="" type="file" placeholder="Select New Track">
+				<button id="btnAddSong" value="something" class="col-4 rounded-right">Add</button> 
 			</div>
 			</div>
 			
 		</div>
 		
-		<ol id="tracks" class="list-group">
- 			<div class="h5 pt-5" >My Playlist:</div>
+		<ol id="tracks" class="list-group  py-3 p-2 bg-light h-100 rounded-bottom">
+ 			<div id="" class="h5" >My Playlist:</div>
 
 
 		</ol>
@@ -38,7 +50,7 @@
 
 
 	</div>	
-	
+</div>	
 
 
 </div>

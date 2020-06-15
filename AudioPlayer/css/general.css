@@ -1,0 +1,92 @@
+body
+{
+	padding-right: 35%;
+	padding-left: 35%;
+}
+
+.butHeigh
+{
+	height: 50px;
+}
+
+#CD
+{
+	height: 300px;
+	background: url(../img/cd.png) center no-repeat;
+	background-size: contain;
+}
+
+#buttons
+{
+	background:  #eaecee ;
+}
+
+#playLast
+{
+	background: url("../img/icons/skip-backward-fill.svg") center no-repeat;
+	background-size: contain;
+}
+
+#playLast:active
+{
+	background: url("../img/icons/skip-backward.svg") center no-repeat;
+	background-size: contain;
+}
+
+#playCurrent
+{
+	background: url("../img/icons/play-fill.svg") center no-repeat;
+	background-size: contain;
+}
+
+#playCurrent:active
+{
+	background: url("../img/icons/play.svg") center no-repeat;
+	background-size: contain;
+}
+
+#pauseCurrent
+{
+	background: url("../img/icons/pause-fill.svg") center no-repeat;
+	background-size: contain;
+}
+
+#pauseCurrent:active
+{
+	background: url("../img/icons/pause.svg") center no-repeat;
+	background-size: contain;
+}
+
+
+#playNext
+{
+	background: url("../img/icons/skip-forward-fill.svg") center no-repeat;
+	background-size: contain;
+}
+
+#playNext:active
+{
+	background: url("../img/icons/skip-forward.svg") center no-repeat;
+	background-size: contain;
+}
+
+#playRandom
+{
+	background: url("../img/icons/arrow-left-right.svg") center no-repeat;
+	background-size: contain;
+}
+
+
+
+/*#btnGetSong
+{
+
+}*/
+
+#tracks
+{
+	height: 200px;
+	max-height: 300px;
+	min-height: 300px;
+	overflow-y: scroll;
+}

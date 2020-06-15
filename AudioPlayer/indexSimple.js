@@ -28,6 +28,7 @@ var audio = new Audio();
 
 var audEndings = "continuous";
 
+var cdPlay = false;
 
 /*Functionalities of the App*/
 
@@ -38,6 +39,7 @@ function curPlayer() {
 		audio.onended = function() {
 			nextOne()	
 			}
+
 		} else {
 			if (audEndings === "random") {
 			audio.onended = function() {
@@ -45,6 +47,13 @@ function curPlayer() {
 				}
 			}
 		}
+		audio.onplay = function() {
+			cdPlays()	
+			}
+		audio.onpause = function() {
+			cdPlaynt()	
+			}
+
 	}
 
 
@@ -91,6 +100,17 @@ function randomOne() {
 	status(changer)
 }
 
+function cdPlays() {
+		CD.style.background  = "url(img/cd.gif) center no-repeat";
+		CD.style.backgroundSize  = "contain";
+}
+
+function cdPlaynt() {
+		CD.style.background  = "url(img/cd.png) center no-repeat";
+		CD.style.backgroundSize  = "contain";
+}
+
+
 			/*Player Buttons*/
 playCurrent.addEventListener('click', function(){
 	audio.play()
@@ -104,36 +124,33 @@ pauseCurrent.addEventListener('click', function(){
 })
 
 playNext.addEventListener('click', function(){
-	
 	if (audEndings === "continuous") {
 		nextOne()
-		}				
-		 else {	
+		} else {	
 		 	randomOne()
-		 }
+		 	}
 	})
 
 playLast.addEventListener('click', function(){
-	
 	if (audEndings === "continuous") {
 		lastOne()
-		}				
-		 else {	
-		 	randomOne()
-		 }
-	}
+		} else {	
+		 		randomOne()
+		 		}
+		}
 	)
 
 playRandom.addEventListener('click', function(){
-	audEndings = "random";
+	if (audEndings === "continuous") {
+		audEndings = "random"
+		playRandom.style.backgroundColor = " #d5d8dc"
+	} else {
+		audEndings = "continuous"
+		playRandom.style.backgroundColor = ""
+	}
 	status()
 	}
 	)
-
-
-
-
-
 
 btnAddSong.addEventListener('click', function () {
 	var a = btnGetSong.value.split("fakepath")
