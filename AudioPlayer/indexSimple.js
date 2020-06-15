@@ -64,6 +64,7 @@ function nextOne(){
 	}
 }
 
+
 function lastOne(){
 	if (changer === 0) {
 		changer = playlist.length-1
@@ -95,6 +96,7 @@ playCurrent.addEventListener('click', function(){
 	audio.play()
 	status()
 })
+
 
 pauseCurrent.addEventListener('click', function(){
 	audio.pause()
