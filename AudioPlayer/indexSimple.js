@@ -1,9 +1,8 @@
-var audioButton = document.getElementById("audioButton")/**/
-var selectedSong = document.getElementById("selectedSong")/**/
+
 var tracks = document.getElementById("tracks")/*For the visible tracklist*/
-var btnAddSong = document.getElementById("btnAddSong")/**/
-var btnGetSong = document.getElementById("btnGetSong")/**/
-var whole = document.getElementById("whole")/**/
+var btnAddSong = document.getElementById("btnAddSong")/*To Add songs*/
+var btnGetSong = document.getElementById("btnGetSong")/*To Select songs*/
+var whole = document.getElementById("whole")/*In case I need to address it*/
 
 
 
@@ -22,7 +21,7 @@ function status() {
 
 var playlist = []
 
-let changer = 0
+var changer = 0
 
 var audio = new Audio();
 
@@ -53,7 +52,6 @@ function curPlayer() {
 		audio.onpause = function() {
 			cdPlaynt()	
 			}
-
 	}
 
 
@@ -69,8 +67,8 @@ function nextOne(){
 
 	curPlayer()
 	audio.play()
-	status()
-	}
+	
+	}status()
 }
 
 
@@ -79,25 +77,21 @@ function lastOne(){
 		changer = playlist.length-1
 		curPlayer()
 		audio.play()
-		status("current song:" + playlist[changer])
-		status("current song var:" + changer)
+		status()
 	}
 	else{
 		changer -= 1;
 		curPlayer()
 		audio.play()
-		status("current song:" + playlist[changer])
-		status("current song var:" + changer)
-	}	
+
+	}	status()
 }
 
 function randomOne() {
 	changer = Math.floor(Math.random() * playlist.length)
 	curPlayer()
 	audio.play()
-	status(playlist.length)
-	status(playlist[changer])
-	status(changer)
+	status()
 }
 
 function cdPlays() {
@@ -110,10 +104,19 @@ function cdPlaynt() {
 		CD.style.backgroundSize  = "contain";
 }
 
+// function showSong(x) {
+// 	var hlSongs = getElementByClassName('page-link')
+// 	for (var i = 0; i <= hlSongs.length; i++) {
+// 		if (hlSongs[i].innerHTML === playlist[changer]) {
+// 		x.style.background = 'red'
+// 		}
+// 	}
+// }
 
 			/*Player Buttons*/
 playCurrent.addEventListener('click', function(){
 	audio.play()
+	 showSong()
 	status()
 })
 
