@@ -4,7 +4,7 @@ var btnAddSong = document.getElementById("btnAddSong")/*To Add songs*/
 var btnGetSong = document.getElementById("btnGetSong")/*To Select songs*/
 var whole = document.getElementById("whole")/*In case I need to address it*/
 
-
+https://api.deezer.com/search?q=eminem
 
 /*My function "status" helsps me check the current status/value of my variables*/
 function status() {
@@ -60,7 +60,6 @@ function nextOne(){
 	if (changer < playlist.length-1) {
 		changer += 1;
 		curPlayer()
-		
 		audio.play()
 		status()
 	} else {changer = 0
@@ -116,7 +115,7 @@ function cdPlaynt() {
 			/*Player Buttons*/
 playCurrent.addEventListener('click', function(){
 	audio.play()
-	 showSong()
+	 // showSong()
 	status()
 })
 

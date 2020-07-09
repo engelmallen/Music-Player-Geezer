@@ -2,132 +2,78 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>ClimbSky Arts</title>
-	<link rel="stylesheet" type="text/css" href="portfolios.css">
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/general.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script></head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
-
-<section id="modal">
-
-	<form id="modalForm">
-		<h3>Let's do Business!</h3>
-		<a class="buttonClose" href="javascript:;"><img id="buttonClose" src="img/imgClose.png" class="buttonClose"></a>
-		<input id="modalCompany" type="Text" placeholder="Company Name">
-		<input id="modalContact" type="Text" placeholder="Contact Name">
-		<input id="modalEmail" type="Text" placeholder="Email">
-		<input id="modalNumber" type="Text" placeholder="Number">
-		<h3>Type of Project:</h3>
-		<input type="radio" id="modalGraph" name="Graphic" class="radioLeft"> 
-			<label for="modalGraph" class="labelLeft">Graphic Design</label>
-		<input type="radio" id="modalIllus" name="Illustration" class="radioRight"> 
-			<label for="modalIllus" class="labelRight">Illustration</label>
-		<input type="radio" id="modalWeb" name="Web" class="radioLeft"> 
-			<label for="modalWeb" class="labelLeft">Website</label>
-		<input type="radio" id="modalSocial" name="Social" class="radioRight"> 
-			<label for="modalSocial" class="labelRight">Social Media</label>
-		<textarea name="Details" rows="4" cols="28" placeholder="Details"></textarea>
-		<input id="modalSubmit" type="Button" value="Submit">
-		<input id="modalClear" type="Button" value="Clear">
-	</form>
-</section>
-
-<section id="home">
-	<header>
-		<div id="logo"><a href="#home"> <img src="img/imgLogo.png" height="100%"></a></div>
-		<ul>
+<body class="bg-danger font-weight-light">
 
 
-			<li><a href="#contact">Art</a></li>			
-			<li><a href="#workIndex">Design</a></li>
-			<li><a href="#about">About Me</a></li>
-			<li><a id="butHire" href="#">Contact Me</a></li>
-		</ul>
-	</header>
 
-	<article id="homeContent">
-		<div id="artGalRight"><img src="img/imgArrowLeft.png"></div>		
-		<div id="artGallery"></div>
-		<div id="artGalLeft"><img src="img/imgArrowRight.png"></div>
-
-
-	</article>
-</section>
-
-						<h2 id="workIndex">Work</h2>
-<section id="work">
-
-	<article id="workGallery">
+<div id="whole" class=" shadow">
+	<div id="cover" class="pt-5 bg-light w-100">
+		<div id="curPlay" class="p-1 h3 text-center">
 			
-			<div id="galleryImgs"></div>
-			<div id="galleryLft"><img src="img/imgArrowLeft.png"></div>
-			<div id="galleryRgt"><img src="img/imgArrowRight.png"></div>
-
-	</article>
-</section>
-
-						<h2 id="aboutTitl">About Me</h2>
-<section id="about">
-	
-	<div id="aboutWrap">
-		<div id="aboutCard">
-			<div id="aboutMe"  class="aboutLimts">
-				<img src="img/imgMe.jpg">
-				</ul>
-			</div>	
-		</div>
-		<div id="aboutDesc" class="aboutLimts">
-			
-			Hey! I am Engel Mallen.
-			<br><br>
-			I'm simply passionate about the arts and enjoy turning my ideas into actual projects.
-			I am experienced in Graphic Design, Web Design, Motion Arts and Illustration.
-			<br><br>
-			Check out my work: <a href="https://engelmallen.weebly.com/" style="color:#db8535;">
-			Engel's Portfolio
-			</a>
-			<br><br>
-			Want a sneak pick of my code?
-			<br>
-			Visit: <a href="https://github.com/engelmallen/" style="color:#db8535;">https://github.com/</a>
-
-<!-- 			Greetings! 
-			<br><br>
-			My name is Engel, I’m a graphic Designer, Web Designer, Motion artist and 
-			a total Nerd. Please check on my work as it grows. 
-			<br><br>
-			I worked as a Web designer at Yellow Pages and Telecom Worldwide 
-			Sollitions Inc. In wich I used mainly HTML, CSS and a little of JavaScript.
-			<br><br>
-			Please Check my code on:<br>
-			<a href="https://github.com/engelmallen/">github.com/Engelmallen</a> -->
+			<!-- black Diamond -->
 		</div>
 	</div>
-</section>
-						<!-- <h2 class="h2Close">Contact</h2> -->
-<footer>
 
 
-<!-- 	<form id="contactForm">
-		<input id="contactName" type="Text" placeholder="Name and Last Name">
-		<input id="contactCompany" type="Text" placeholder="Company Name">
-		<input id="contactEmail" type="Text" placeholder="Email">
-		<input id="contactPhone" type="Text" placeholder="Phone Number">
-		<input id="contactSubmit" type="Button" value="Submit">
-		<input id="contactClear" type="Button" value="Clear">
-	</form> -->
 
+<div class="container-fluid py-3 bg-light">
+	
+	<div class="container-fluid d-inline-block">
+		<div class="row">
+					<div id="playLast" class="p-3 mx-2 butHeigh d-inline col-2"></div>
+					<div id="playCurrent" class="p-3 mx-2 butHeigh d-inline col-2"></div>
+					<div id="pauseCurrent" class="p-3 mx-2 butHeigh  d-inline  col-2"></div>
+					<div id="playNext" class="p-3 butHeigh mx-2  d-inline col-2"></div>
+					<div id="playRandom" class="p-3 mx-2 butHeigh d-inline col-2"></div>
+		</div>
+	</div>
 
-<div id="socialMedia" >
-	<a href="https://engelmallen.weebly.com/" style="color:#db8535;">
-		<img src="img/imgGitHub.png">
-	</a>
-	<img src="img/imgInstagram.png">
-	<a href="https://github.com/engelmallen/" style="color:#db8535;"><img src="img/imgWeebly.png"></a>
 </div>
-</footer>
+
+<div id="dashBoard" class=" bg-warning p-2 container">
+	<div class="row mx-0 ">
+	<div class="h6 col-12">Search:</div>
+	<input id="searchField" type="text" class="p-1 col-10 pl-4">
+	<input id="searchButton" type="button" class="btn-info col-2" value="Search ">
+
+<!-- 	<input id="testField" type="text" class="" placeholder="test">
+	<input id="testButton" type="button" class="btn-light " value="test "> -->
+
+	<div id="tracklist" class="p-0 col-12 mt-2">
+
+	</div>
+</div>
+</div>
+</div>
 
 
-<script type="text/javascript" src="portfolios.js"></script>	
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!--  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
+    <script type="text/javascript" src="js/rapidDeezerKey.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- My JS -->
+    <script type="text/javascript" src="js/general.js"></script>
+    <script type="text/javascript" src="index.js"></script>	
 </body>
 </html>

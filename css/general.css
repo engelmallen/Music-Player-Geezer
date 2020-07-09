@@ -2,11 +2,26 @@ body
 {
 	padding-right: 35%;
 	padding-left: 35%;
+
 }
 
 .butHeigh
 {
 	height: 50px;
+}
+
+
+#whole
+{
+	margin-top: 100px;
+	/*position: absolute;*/
+}
+
+#curPlay{
+   	background-color: rgba(255, 255, 255, 0.7);
+   	color: black;
+    border: 1px #222;
+    display: none;
 }
 
 #CD
@@ -76,7 +91,11 @@ body
 	background-size: contain;
 }
 
-
+/*#playRandom:active
+{
+	background: url("../img/icons/arrow-left-right.svg") red center no-repeat;
+	background-size: contain;
+}*/
 
 /*#btnGetSong
 {
@@ -88,5 +107,41 @@ body
 	height: 200px;
 	max-height: 300px;
 	min-height: 300px;
-	overflow-y: scroll;
+	overflow-y: hidden;
+
+}
+
+#searchField
+{
+	/*width: 486px;*/
+	border: none;
+}
+
+#searchButton
+{
+	border: none;
+}
+
+#tracklist
+{
+	max-height: 156px;
+	overflow: auto;
+}
+
+#dashBoard
+{
+	transition: 3s
+}
+
+
+.radius50
+{
+	border-radius: 50px;
+}
+
+#cover
+{
+	height: 500px;
+	width: 500px;
+	background-size: 100%;
 }
